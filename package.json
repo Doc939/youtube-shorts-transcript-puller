@@ -11,7 +11,8 @@
   "dependencies": {
     "react": "^18",
     "react-dom": "^18",
-    "next": "14"
+    "next": "14",
+    "youtube-transcript": "^1.0.6"
   },
   "devDependencies": {
     "tailwindcss": "^3",
