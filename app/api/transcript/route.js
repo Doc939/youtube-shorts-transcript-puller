@@ -15,8 +15,9 @@
       return Response.json({ error: 'Invalid YouTube URL' }, { status: 400 })
     }
 
-    // Dynamically import to avoid build-time issues
-    const { getTranscript } = await import('youtube-transcript')
+    // Dynamically import
+    const transcriptModule = await import('youtube-transcript')
+    const getTranscript = transcriptModule.default || transcriptModule.getTranscript
     
     const transcript = await getTranscript(videoId)
     
